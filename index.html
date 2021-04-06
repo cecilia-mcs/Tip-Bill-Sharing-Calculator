@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bill Sharing Calculator</title>
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Quicksand:wght@300&family=Raleway:wght@100&family=Varela+Round&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+  <body>
+
+    <div class='wrapper'>
+
+    <div class='wrapper-inner'>
+   
+    <h1> Bill Sharing Calculator</h1>
+
+  <form>
+  <div class='wrapper-inner-inner'>
+
+    <label for='billamount' class='billamount'> How much was your bill?</label>
+    <input type='text' class='bill-input ' id='billamount' name='billamount' placeholder='Bill Amount'>
+    
+    <label for='service-level'> Select your service level:</label>
+    <select id='service-level' class='service-input'>
+    <option  value='0'></option>
+    <option value='0.05'>Terrible - 5%</option>
+    <option value='0.10'>It was okay - 10%</option>
+    <option value='0.15'>Standard - 15%</option>
+    <option value='0.20'>Superior - 20%</option>
+    <option value='0.30'>I feel rich today - 30%</option>
+    </select>
+    
+  <label for='shareppl'> How many people are sharing the bill?</label>
+  <input type='text' class='shareppl-input' id='shareppl' name='shareppl' placeholder='Number of People'>
+</form>
+
+
+  <span class='btn-container'>
+  <button type="button" class='calculate-btn'>Calculate</button>
+  <button type='reset' class='reset-btn'>Reset</button>
+  </span>
+
+  <div class="amtbox">
+    Total Amount: 
+    <div id='amtfigures'>$ </div>
+    <span id='each'>each</span>
+</div>
+
+ </div>
+</div>
+  </div>
+  
+    <script src="script.js"></script>
+
+  </body>
+</html>

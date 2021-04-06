@@ -1,0 +1,173 @@
+html, body {
+    font-family: 'Valera Round', sans-serif;
+    font-size: 16px;
+    color: #006d77;
+    background-image: url('https://images.pexels.com/photos/6620155/pexels-photo-6620155.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    
+    }
+    
+    .wrapper {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2a9d8f;
+    width: 600px;
+    height: 800px;
+    border-radius: 10px;
+    }
+    
+    
+    .wrapper-inner {
+    background-color: white;
+    font-size: 1.5rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 500px;
+    height: 600px;
+    border-radius: 30px 30px;
+    border: 2px solid #006d77;
+    color: #264653;
+    box-shadow: 10px 10px 30px black;
+    }
+    
+    .wrapper-inner-inner {
+    background-color: white;
+    font-size: 1.5rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    height: 500px;
+    color: #264653;
+    }
+    
+    h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    background-color: #006d77;
+    height: 45px;
+    color: white;
+    margin-top: 0px;
+    padding-top: 0px;
+    padding: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    }
+    
+    
+    label {
+    padding-top: 15px;
+    }
+    
+    .bill-input {
+    padding: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border: 2px solid #83c5be;
+    font-size: 1.3rem;
+    color: #2a9d8f;
+    }
+    
+    input[type="text"]:focus {
+    color: #2a9d8f;
+    border: 3px solid #2a9d8f;
+    outline: none;
+    }
+    
+    select:focus {
+        color: #2a9d8f;
+        border: 3px solid #2a9d8f;
+        outline: none;
+        }
+    
+    
+    
+    
+    .service-input {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-size: 1.3rem;
+    color: #2a9d8f;
+    border: 2px solid #83c5be;
+    }
+    
+    .shareppl-input {
+    padding: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border: 2px solid #83c5be;
+    font-size: 1.3rem;
+    color: #2a9d8f;
+    } 
+    
+    
+    .btn-container {
+        margin: 0 auto;
+        margin-top: 20px;
+        
+    }
+    
+    .calculate-btn {
+    background-color: #006d77;
+    color: white;
+    width: 200px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    padding: 10px;
+    font-size: 1.3rem;
+    border: 2px solid #006d77;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px black;
+    }
+    
+    
+    .reset-btn {
+        background-color: #006d77;
+        color: white;
+        width: 200px;
+        margin: 0 auto;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        margin-left: 10px;
+        padding: 10px;
+        font-size: 1.3rem;
+        border: 2px solid #006d77;
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px black;
+        }
+        
+    button:focus {
+        outline: none;
+        border: 3px solid black;
+        }
+        
+    button:hover {
+        cursor: pointer;
+        }
+    
+    ::placeholder {
+    color: #d8e2dc;
+    }
+    
+    .amtbox {
+        background-color: rgba(130, 196, 190, 0.30);
+        color: #006d77;
+        text-align: center;
+        display: none;
+        width: 60%;
+        margin: auto;
+    }
+    
