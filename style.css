@@ -2,9 +2,7 @@ html, body {
     font-family: 'Valera Round', sans-serif;
     font-size: 16px;
     color: #006d77;
-    background-image: url('https://images.pexels.com/photos/6620155/pexels-photo-6620155.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-color: #2a9d8f;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
@@ -16,13 +14,16 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #2a9d8f;
-    width: 600px;
-    height: 800px;
+    background-image: url('pic4.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 95vw;
+    height: 95vh;
     border-radius: 10px;
     }
-    
-    
+  
+
     .wrapper-inner {
     background-color: white;
     font-size: 1.5rem;
@@ -163,11 +164,12 @@ html, body {
     }
     
     .amtbox {
-        background-color: rgba(130, 196, 190, 0.30);
+        background-color: rgba(130, 196, 190, 0.9);
         color: #006d77;
         text-align: center;
         display: none;
         width: 60%;
         margin: auto;
+        
     }
     
