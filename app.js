@@ -36,15 +36,11 @@ calculateBtn.addEventListener('click', function calculate() {
       amtBox.style.display = 'none';
       each.style.display = 'none';
     
-    //Checks whitespace on the bill value input, before parses into numbers.
     } else if  (billInput == " ") {
       alert('Whitespace detected. Please insert numerical values in bill amount.');
       amtBox.style.display = 'none';
       each.style.display = 'none';
     
-  
-  //below checks if values have characters including whitespaces, other than 
-  //$ , . 0-9., OR whether it has 0
     } else if (/[^.\d]/.test(numOfPplSharing)) {
     alert('Insert number of people sharing the bill');
     amtBox.style.display = 'none';
