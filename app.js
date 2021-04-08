@@ -13,39 +13,39 @@ calculateBtn.addEventListener('click', function calculate() {
   const shareInput = document.querySelector('.shareppl-input').value;
 
     
-  const bill = parseInt(billInput);
-
-  //the values in serviceInput in HTML starts with 0.10, 0.15, so we need to use parseFloat to convert to integers with decimals. If we use parseInt on this variable, it can only read integers, or whole numbers, not floating numbers.
+  const bill = parseFloat(billInput);
   const service = parseFloat(serviceInput);
-  const numOfPplSharing = parseInt(shareInput);
+  const numOfPplSharing = parseFloat(shareInput);
 
+  let formatter = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'CAD',
+    });
 
-  //with Number()
-  // //checks for 0 and spaces
-  // if (bill === 0) {
-  //   alert('Insert values');
-  // }
-
-  //checks if value has characters including whitespaces, other than $ , . 0-9., OR whether it has 0
-
-  //checks for nothing entered 
-  // if (billInput.length == '') {
-  //    alert('Insert values');
-  // }
-
-  //Below is looking for strings that have white spaces. If there are white spaces, it will trim them, and any strings that are 0.
-  // if (billInput.trim().length == 0) {
-  //    alert('Insert values');
-  // }
-
-  // " " means a space, "" means empty strings or nothing entered
-  if (billInput == " " || billInput.length == "" || bill == 0) {
-    alert('Insert bill amount');
+  if (/[^\.\d\s]/.test(billInput)) {
+    alert('Please insert numerical values only.');
     amtBox.style.display = 'none';
     each.style.display = 'none';
+  } else if (billInput.length == "") {
+      alert('Empty detected. Please insert numerical values in bill amount.');
+      amtBox.style.display = 'none';
+      each.style.display = 'none';
+
+    } else if  (bill == 0) {
+      alert('Please insert a value that is greater than 1.');
+      amtBox.style.display = 'none';
+      each.style.display = 'none';
     
-  //below checks if values have characters including whitespaces, other than $ , . 0-9., OR whether it has 0
-    } else if (/[^$,\.\d]/.test(numOfPplSharing)) {
+    //Checks whitespace on the bill value input, before parses into numbers.
+    } else if  (billInput == " ") {
+      alert('Whitespace detected. Please insert numerical values in bill amount.');
+      amtBox.style.display = 'none';
+      each.style.display = 'none';
+    
+  
+  //below checks if values have characters including whitespaces, other than 
+  //$ , . 0-9., OR whether it has 0
+    } else if (/[^.\d]/.test(numOfPplSharing)) {
     alert('Insert number of people sharing the bill');
     amtBox.style.display = 'none';
     each.style.display = 'none';
@@ -56,13 +56,12 @@ calculateBtn.addEventListener('click', function calculate() {
 if (bill >= 1 && numOfPplSharing >=0){
     let totalBillTip = (bill * service) + bill;
     let totalBillShared = totalBillTip / numOfPplSharing;
-   console.log(totalBillShared);
+
     amtBox.style.display = 'block';
-    amtFigures.innerText = totalBillShared.toFixed(2);
+    amtFigures.innerText = formatter.format(totalBillShared);
 }
 
 });
-
 
 resetBtn.addEventListener('click', function () {
   amtBox.style.display = 'none';
